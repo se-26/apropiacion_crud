@@ -23,14 +23,6 @@
     {
       "titulo": "practicar el DOM",
       "id": "My_aaFNRfQs"
-    },
-    {
-      "titulo": "BTS",
-      "id": "3QaC4iGBqqg"
-    },
-    {
-      "titulo": "MELIODAS",
-      "id": "7yWrBmU9bi8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
