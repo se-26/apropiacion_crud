@@ -1,0 +1,88 @@
+Parte 1: Comprendiendo antes de programar
+1. ¿Qué método HTTP usarían para?
+• Crear una tarea
+
+Se utilizaría el método HTTP POST porque permite enviar nuevos datos al servidor para crear una tarea.
+
+• Listar tareas
+
+Se utilizaría el método HTTP GET porque permite obtener información almacenada en el servidor.
+
+• Actualizar una tarea
+
+Se utilizaría el método HTTP PUT o PATCH porque ambos permiten modificar información existente en el servidor.
+
+• Eliminar una tarea
+
+Se utilizaría el método HTTP DELETE porque permite eliminar información almacenada en el servidor.
+
+2. ¿Qué información necesitarían enviar al servidor para actualizar o eliminar una tarea?
+
+Para actualizar una tarea es necesario enviar el id de la tarea y los nuevos datos que se desean modificar.
+
+Para eliminar una tarea solamente es necesario enviar el id para identificar correctamente cuál tarea debe eliminarse.
+
+3. ¿En qué momento debe actualizarse el DOM?
+
+El DOM debe actualizarse después de que el servidor responda correctamente a la solicitud HTTP, para mostrar la información actualizada al usuario.
+
+Parte 2: Implementación Guiada
+2. Listar tareas (READ)
+¿En qué momento se transforman los datos JSON en elementos HTML?
+
+Los datos JSON se transforman en elementos HTML cuando JavaScript recorre la información usando forEach() y crea elementos del DOM mediante createElement() o innerHTML.
+
+3. Crear tarea (CREATE)
+¿Qué ocurre primero: se actualiza el DOM o se envía la solicitud al servidor?
+
+Primero se envía la solicitud HTTP al servidor usando fetch() y después de recibir la respuesta se actualiza el DOM.
+
+4. Eliminar tarea (DELETE)
+¿Por qué es importante el id en esta operación?
+
+El id es importante porque identifica de manera única la tarea que se desea eliminar. Sin el id no sería posible saber qué tarea borrar.
+
+5. Actualizar tarea (UPDATE)
+¿Qué diferencia existe entre modificar un dato en el DOM y modificarlo en el servidor?
+
+Modificar un dato en el DOM solamente cambia la información visualmente en la página y esos cambios pueden perderse al recargar.
+
+Modificar un dato en el servidor guarda la información permanentemente y permite mantener los cambios almacenados.
+
+Parte 3: Identificación del Ciclo Completo
+CREATE
+El usuario escribe una tarea.
+JavaScript captura el evento submit.
+Se envía una solicitud POST usando fetch().
+El servidor responde con un JSON.
+El DOM se actualiza mostrando la nueva tarea.
+READ
+El usuario abre la página.
+JavaScript ejecuta fetch() con método GET.
+El servidor responde con las tareas en formato JSON.
+JavaScript recorre la información recibida.
+El DOM muestra las tareas en pantalla.
+UPDATE
+El usuario pulsa el botón editar.
+JavaScript captura el evento click.
+Se envía una solicitud PATCH al servidor.
+El servidor actualiza la información.
+El DOM se refresca mostrando los cambios.
+DELETE
+El usuario pulsa el botón eliminar.
+JavaScript captura el evento click.
+Se envía una solicitud DELETE usando el id.
+El servidor elimina la tarea.
+El DOM se actualiza eliminando la tarea de la lista.
+Reflexión Final
+• ¿Qué operación les resultó más sencilla?
+
+La operación más sencilla fue READ porque solamente era necesario obtener y mostrar la información en pantalla.
+
+• ¿Cuál fue la más compleja y por qué?
+
+La operación más compleja fue UPDATE porque fue necesario identificar correctamente la tarea usando el id y actualizar tanto el servidor como el DOM.
+
+• ¿En qué parte del ciclo sintieron mayor dificultad: en la comunicación con la API o en la manipulación del DOM?
+
+La mayor dificultad estuvo en la comunicación con la API usando fetch(), especialmente al trabajar con métodos HTTP y respuestas JSON.
