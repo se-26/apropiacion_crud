@@ -1,14 +1,6 @@
 {
   "tareas": [
     {
-      "id": "1",
-      "titulo": "Estudiar JavaScript"
-    },
-    {
-      "id": "2",
-      "titulo": "Hacer CRUD"
-    },
-    {
       "id": "3",
       "titulo": "Practicar fetch"
     },
@@ -23,6 +15,10 @@
     {
       "titulo": "practicar el DOM",
       "id": "My_aaFNRfQs"
+    },
+    {
+      "titulo": "selena",
+      "id": "mArt2vSKYPQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
