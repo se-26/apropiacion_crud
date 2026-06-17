@@ -6,7 +6,7 @@ const formulario = document.getElementById("taskForm");
 const input = document.getElementById("taskInput");
 const lista = document.getElementById("taskList");
 
-const API = "http://172.23.96.1:3000/tareas";
+ const API = "http://localhost:3000/tareas";
 
 // =========================
 // READ - OBTENER TAREAS
